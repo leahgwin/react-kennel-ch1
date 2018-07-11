@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-export default class EmployeeList extends Component {
+export default class AnimalList extends Component {
   render() {
     return (
       <React.Fragment>
-        <h2>Employees</h2>
-        {this.props.employees.map(employee => (
+        <h2>Animals</h2>
+        {this.props.animals.map(animal => (
           <div>
-            <ul>{employee.name}</ul>
+            <ul>{animal.name}</ul>
           </div>
         ))}
       </React.Fragment>
