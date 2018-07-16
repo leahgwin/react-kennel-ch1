@@ -1,8 +1,8 @@
-import ReactDOM from "react-dom";
-import React, { Component } from "react";
-import EmployeeList from "./EmployeeList";
-import LocationList from "./LocationList";
-import AnimalList from "./AnimalList";
+// import ReactDOM from "react-dom";
+// import React, { Component } from "react";
+// import EmployeeList from "./EmployeeList";
+// import LocationList from "./LocationList";
+// import AnimalList from "./AnimalList";
 
 // export default class Kennel extends Component {
 //   render() {
@@ -16,4 +16,4 @@ import AnimalList from "./AnimalList";
 //   }
 // }
 
-ReactDOM.render(<Kennel />, document.querySelector("#root"));
+// ReactDOM.render(<Kennel />, document.querySelector("#root"));
