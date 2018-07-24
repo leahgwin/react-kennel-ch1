@@ -51,6 +51,17 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
+
+        {/* <Route
+          path="/employees/:employeeId"
+          render={props => {
+            return (
+              <Employee employee={props.location.state.employee}>
+                {props.location.state.employee.name}
+              </Employee>
+            );
+          }}
+        /> */}
         <Route path="/login" component={Login} />
       </React.Fragment>
     );

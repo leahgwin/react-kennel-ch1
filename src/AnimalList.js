@@ -3,24 +3,24 @@ import Animal from "./Animal";
 
 export default class AnimalList extends Component {
   state = {
-    animals: [
-      { id: 1, name: "Harper" },
-      { id: 2, name: "Scout" },
-      { id: 3, name: "Hyde" },
-      { id: 4, name: "Alphie" },
-      { id: 5, name: "Murphy" },
-      { id: 6, name: "Ivan" }
-    ]
+    animals: []
   };
+
+  componentDidMount() {
+    fetch("http://localhost:5002/animals")
+      .then(e => e.json())
+      .then(animals => this.setState({ animals: animals }));
+  }
+
   render() {
     return (
       <React.Fragment>
         <h2>Animals</h2>
-        <ul>
-          {this.state.animals.map(animal => (
-            <Animal key={animal.id} animal={animal} />
-          ))}
-        </ul>
+        {this.state.animals.map(animal => (
+          <Animal key={animal.id} animal={animal}>
+            {animal.name}
+          </Animal>
+        ))}
       </React.Fragment>
     );
   }

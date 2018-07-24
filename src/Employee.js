@@ -1,5 +1,5 @@
 import React, { Component } from "react";
 
 export default props => {
-  return <li>{props.employee.name}</li>;
+  return <h5 className="card-title">{props.children}</h5>;
 };
